@@ -260,3 +260,45 @@ body {
     transition: all 20ms ease-out;
     vertical-align: center;
 }
+/*
+ * Mapa
+ */
+ #map_canvas {
+    margin-left: 50px !important;
+    margin-right: auto !important;
+    margin-top: 2% !important;
+    margin-bottom: 100px !important;
+    width: 95%;
+    position: absolute !important;
+}
+/*
+ * Boton arriba
+ */
+ .scroll-to-top {
+    position: fixed; /* Cambiar a posición fija para que el botón permanezca en la misma posición en la ventana */
+    bottom: 10px; /* Ajustar la posición vertical */
+    right: 20px; /* Ajustar la posición horizontal */
+    background-color: #2f4f4f;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Agregar una transición suave */
+    z-index: 999; /* Asegurar que el botón esté por encima de otros elementos */
+    border: 1px solid #fff;
+}
+
+.scroll-to-top:hover {
+    background-color: #0b76a6;
+}
+
+.scroll-to-top:active {
+    background-color: #003366;
+}
+
+.scroll-to-top img {
+    vertical-align: middle;
+    margin-right: 6px;
+}

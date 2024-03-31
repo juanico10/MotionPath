@@ -809,6 +809,9 @@
     {
         let map_div = document.getElementById('map_canvas');
         map_div.style = "display: block;";
+        map_div.addEventListener("wheel", function(event) {
+            event.preventDefault();
+        }, { passive: false });
 
         let osm_layer = new OpenLayers.Layer.OSM("OSM");
         map.addLayer(osm_layer);
@@ -865,7 +868,7 @@
         let lon = longitudes[0];
         let lat = latitudes[0];
         let lon_lat = new OpenLayers.LonLat(lon, lat).transform(projection, map.getProjectionObject());
-        let zoom = 17.0 - (extent_meters / 10000.0);
+        let zoom = 15.0 - (extent_meters / 10000.0);
 
         if (zoom < 10.0)
             zoom = 10.0;
@@ -1349,7 +1352,9 @@
         else
             document.getElementById('export_format').value = export_format;
     });
-
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplaza suavemente hacia arriba
+    }
 </script>
 
 <!--
@@ -1363,6 +1368,7 @@
 
 <footer>
     <p>&copy;Copyright (c) 2024 Juan Rodenas Sánchez</p>
+    <button class="scroll-to-top" onclick="scrollToTop()">Ir arriba</button>
 </footer>
 </body>
 

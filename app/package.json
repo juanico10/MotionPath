@@ -28,13 +28,15 @@
     "win": {
       "target": [
         "exe"
-      ]
+      ],
+      "icon": "images/icon.png"
     },
     "linux": {
       "target": [
         "AppImage"
       ],
-      "category": "Development"
+      "category": "Development",
+      "icon": "images/icon.png"
     },
     "directories": {
       "buildResources": ".",
