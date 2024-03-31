@@ -10,4 +10,6 @@ Añadir en el index.html dentro del <head>:
 ```
 
 Y al final encima del </body>:
+```html
 <script src="./pwa/regist_serviceWorker.js"></script>
+```
