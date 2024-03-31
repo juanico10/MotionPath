@@ -1,0 +1,49 @@
+{
+  "name": "MotionPath",
+  "version": "1.0.0",
+  "description": "Analiza archivos GPX, TCX y FIT.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/juanico10/MotionPath",
+  "license": "MIT",
+  "keywords": [
+    "Garmin",
+    "Motion"
+  ],
+  "devDependencies": {
+    "@electron-forge/cli": "^7.3.1",
+    "@electron/packager": "^18.3.1",
+    "electron": "^29.1.6",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "productName": "MotionPath",
+    "appId": "org.juanico.MotionPath",
+    "files": [
+      "./**/*",
+      "!node_modules/**/*"
+    ],
+    "win": {
+      "target": [
+        "exe"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Development"
+    },
+    "directories": {
+      "buildResources": ".",
+      "output": "release"
+    }
+  },
+  "author": {
+    "name": "Electron React Boilerplte Maintainers",
+    "email": "electronreactboilerplate@gmail.com",
+    "url": "https://electron-react-boilerplate.js.org"
+  }
+}
