@@ -1,6 +1,6 @@
 Hacer la app PWA:
 
-Añadir en el index.html dentro del <head>:
+Añadir en el index.html dentro del head:
 
 ```html
     <!-- Añadido para PWA -->
@@ -9,7 +9,7 @@ Añadir en el index.html dentro del <head>:
     <link rel="manifest" href="./pwa/manifest.json" />
 ```
 
-Y al final encima del </body>:
+Y al final encima del body:
 ```html
 <script src="./pwa/regist_serviceWorker.js"></script>
 ```
