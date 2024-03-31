@@ -1,0 +1,21 @@
+server {
+    listen 80;
+    server_name ejemplo.com;
+
+    location / {
+        root /var/www/html;
+        index index.html;
+    }
+
+    location /pagina_protegida {
+        auth_basic "Área restringida";
+        auth_basic_user_file /etc/nginx/.htpasswd;
+
+        error_page 401 = @error401;
+    }
+
+    location @error401 {
+        root /var/www/html;
+        rewrite ^ /auth.html break;
+    }
+} 

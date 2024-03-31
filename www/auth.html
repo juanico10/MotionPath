@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Analizador de actividad</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/favicon.ico">
+    <style>
+        body {
+            text-align: center;
+        }
+        header {
+            margin-bottom: 20px; /* Agregar margen inferior al encabezado */
+        }
+        .logo {
+            max-width: 200px; /* Establecer un ancho máximo para el logo */
+            margin-bottom: 20px; /* Agregar margen inferior al logo */
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            display: inline-block;
+            width: 480px; /* Ajustar el ancho del contenedor */
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px); /* Ajustar el ancho de los campos de entrada */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box; /* Incluir el relleno en el cálculo del ancho */
+        }
+        input[type="password"] {
+            margin-bottom: 20px; /* Agregar margen inferior */
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <img src="./images/logo.svg" alt="Logo de la web" class="logo">
+  </header>
+  <div class="container">
+      <h1>Autenticación Requerida</h1>
+        <form action="$uri" method="post">
+            <input type="text" name="username" placeholder="Usuario">
+            <br>
+            <input type="password" name="password" placeholder="Contraseña">
+            <br>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+  </div>
+  <footer>
+    <p>&copy;Copyright (c) 2024 Juan Rodenas Sánchez</p>
+  </footer>
+</body>
+</html>
